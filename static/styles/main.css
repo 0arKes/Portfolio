@@ -75,7 +75,7 @@ header nav a {
 }
 
 .projects .project-container {
-    width: 80%;
+    width: 100%;
     max-width: 800px;
     margin: auto;
     display: flex;
@@ -87,7 +87,7 @@ header nav a {
 }
 
 .projects .project {
-    width: 40%;
+    width: 100%;
     color: #292929;
     background-color: #f4f4f4;
     padding: 20px;
@@ -156,6 +156,9 @@ footer {
     margin-top: 20px;
 }
 
+
+/*btn modo escuro*/
+
 .dark-mode-btn {
     position: fixed;
     bottom: 20px;
@@ -191,4 +194,33 @@ body.dark-mode footer {
 body.dark-mode .project {
     background-color: #555;
     color: #f4f4f4;
+}
+
+@media (min-width: 700px){
+    .projects .project-container {
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .projects .project {
+        width: 40%;
+        color: #292929;
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: background-color .5s;
+    }
 }
