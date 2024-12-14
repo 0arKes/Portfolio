@@ -1,0 +1,147 @@
+:root{
+    --red: #B9001F;
+    --white: #f4f4f4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #eee8e8;
+    color: #db0000;
+}
+
+header {
+    padding: 35px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.skills, .projects, .contact {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.skills .skill-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skills h2{
+    margin: 25px 0;
+}
+
+.skills .skill {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.projects .project-container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.projects .project {
+    width: 40%;
+    color: #292929;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects .project:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.projects .project h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.projects .project p {
+    color: #777;
+    font-size: 14px;
+}
+
+.contact-icon{
+    margin: 5px 40%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact-icon img{
+    margin: 0 15px;
+}
+
+a{
+    color: var(--red);
+    text-decoration: none;
+}
+
+a:visited{
+    color: #f84764;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #e60026;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #292929;
+    margin-top: 20px;
+}
