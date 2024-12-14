@@ -16,14 +16,23 @@ body {
     box-sizing: border-box;
     background-color: #eee8e8;
     color: #db0000;
+    transition: background-color .5s;
 }
 
 header {
-    padding: 35px 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color .5s;
 }
+
 
 header nav a {
     margin: 0 15px;
@@ -55,7 +64,7 @@ header nav a {
 }
 
 .skills h2{
-    margin: 25px 0;
+    margin: 40px 0;
 }
 
 .skills .skill {
@@ -89,6 +98,7 @@ header nav a {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color .5s;
 }
 
 .projects .project:hover {
@@ -144,4 +154,41 @@ footer {
     padding: 10px;
     background-color: #292929;
     margin-top: 20px;
+}
+
+.dark-mode-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--red);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+.dark-mode-btn:hover {
+    background-color: rgb(255, 0, 0);
+    transform: scale(1.1);
+}
+
+
+body.dark-mode {
+    background-color: #333;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #444;
+}
+
+body.dark-mode .project {
+    background-color: #555;
+    color: #f4f4f4;
 }

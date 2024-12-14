@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="static/styles/main.css">
 </head>
 <body>
-    <header id="home">
+    <header>
         <nav>
             <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
         </nav>
     </header>
 
-    <section class="skills">
+    <section class="skills" id="home">
         <h2>Minhas Habilidades</h2>
         <div class="skill-container">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="50" alt="html5 logo"  />
@@ -64,8 +64,8 @@
             <div class="project">
                 <a href="https://github.com/0arKes/semana-frontend-mundo-invertido" target="_blank">
                     <img src="static/img/st-img.png" alt="Estúdio de Interiores">
-                    <h3>Estúdio de Interiores</h3>
-                    <p>#Web Design</p>
+                    <h3>Mundo Invertido</h3>
+                    <p>#HTML CSS JS</p>
                 </a>
             </div>
             
@@ -88,12 +88,26 @@
             </a>
         </div>
     
-          
-    
     </section>
-
+    <button id="darkModeToggle" class="dark-mode-btn">🌙</button>
     <footer>
         <p>&copy; 2024 - Bruno Haag</p>
     </footer>
+    <script defer>
+        const toggleButton = document.getElementById("darkModeToggle");
+        const body = document.body;
+
+        // Evento de clique para alternar o modo escuro
+        toggleButton.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+            
+            // Alterna o ícone do botão entre sol e lua
+            if (body.classList.contains("dark-mode")) {
+                toggleButton.textContent = "☀️";
+            } else {
+                toggleButton.textContent = "🌙";
+            }
+        });
+    </script>
 </body>
 </html>
